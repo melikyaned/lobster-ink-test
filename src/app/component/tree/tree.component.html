@@ -1,0 +1,14 @@
+<div class="card flex flex-column justify-content-center">
+  <p-organizationChart [value]="tree"
+                       selectionMode="single"
+                       [preserveSpace]="false"
+                       (onNodeSelect)="onNodeSelect($event.node)"
+                       (onNodeUnselect)="hideNode($event.node)">
+  </p-organizationChart>
+
+  <ng-container *ngIf="leafNode">
+    <div id="character-description" class="w-full text-center mt-5">
+      <span class="text-lg text-indigo-500">{{ leafNode.data }}</span>
+    </div>
+  </ng-container>
+</div>

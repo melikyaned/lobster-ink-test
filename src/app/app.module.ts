@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {PrimengModule} from '../modules/primeng/primeng.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TreeComponent } from './component/tree/tree.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TreeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    PrimengModule
   ],
   providers: [],
   bootstrap: [AppComponent]
